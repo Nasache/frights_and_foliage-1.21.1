@@ -4,6 +4,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.InGameHud;
+import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.nathan.frights_and_foliage.blocks.ModBlocks;
@@ -39,7 +40,7 @@ public abstract class InGameHudMixin {
     }
 
     @Inject(method = "render", at = @At("HEAD"))
-    private void injectCarvedWarpedPumpkinCheck(DrawContext context, float tickDelta, CallbackInfo ci) {
+    private void injectCarvedWarpedPumpkinCheck(DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci) {
         MinecraftClient client = MinecraftClient.getInstance();
         RenderSystem.enableBlend();
 

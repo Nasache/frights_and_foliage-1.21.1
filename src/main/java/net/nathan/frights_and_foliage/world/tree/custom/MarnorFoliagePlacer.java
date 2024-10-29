@@ -1,6 +1,7 @@
 package net.nathan.frights_and_foliage.world.tree.custom;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.IntProvider;
@@ -13,19 +14,17 @@ import net.nathan.frights_and_foliage.blocks.ModBlocks;
 import net.nathan.frights_and_foliage.world.tree.ModFoliagePlacerTypes;
 
 public class MarnorFoliagePlacer extends FoliagePlacer {
-    public static final Codec<MarnorFoliagePlacer> CODEC = RecordCodecBuilder.create((instance) -> {
-        return fillFoliagePlacerFields(instance).and(instance.group(IntProvider.createValidatingCodec(4, 16).fieldOf("height").forGetter((foliagePlacer) -> {
-            return foliagePlacer.height;
-        }), Codec.floatRange(0.0F, 1.0F).fieldOf("wide_bottom_layer_hole_chance").forGetter((foliagePlacer) -> {
-            return foliagePlacer.wideBottomLayerHoleChance;
-        }), Codec.floatRange(0.0F, 1.0F).fieldOf("corner_hole_chance").forGetter((foliagePlacer) -> {
-            return foliagePlacer.cornerHoleChance;
-        }), Codec.floatRange(0.0F, 1.0F).fieldOf("hanging_leaves_chance").forGetter((foliagePlacer) -> {
-            return foliagePlacer.hangingLeavesChance;
-        }), Codec.floatRange(0.0F, 1.0F).fieldOf("hanging_leaves_extension_chance").forGetter((foliagePlacer) -> {
-            return foliagePlacer.hangingLeavesExtensionChance;
-        }))).apply(instance, MarnorFoliagePlacer::new);
-    });
+    public static final MapCodec<MarnorFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec((instance) ->
+            fillFoliagePlacerFields(instance)
+                    .and(instance.group(
+                            IntProvider.createValidatingCodec(4, 16).fieldOf("height").forGetter((foliagePlacer) -> foliagePlacer.height),
+                            Codec.floatRange(0.0F, 1.0F).fieldOf("wide_bottom_layer_hole_chance").forGetter((foliagePlacer) -> foliagePlacer.wideBottomLayerHoleChance),
+                            Codec.floatRange(0.0F, 1.0F).fieldOf("corner_hole_chance").forGetter((foliagePlacer) -> foliagePlacer.cornerHoleChance),
+                            Codec.floatRange(0.0F, 1.0F).fieldOf("hanging_leaves_chance").forGetter((foliagePlacer) -> foliagePlacer.hangingLeavesChance),
+                            Codec.floatRange(0.0F, 1.0F).fieldOf("hanging_leaves_extension_chance").forGetter((foliagePlacer) -> foliagePlacer.hangingLeavesExtensionChance)
+                    ))
+                    .apply(instance, MarnorFoliagePlacer::new));
+
 
     private final IntProvider height;
     private final float wideBottomLayerHoleChance;

@@ -63,7 +63,7 @@ public class StalkEntity extends HostileEntity {
                         this.playAlertSound();
                         this.isAlerted = true;
                         this.followPlayerTicks = 200;
-                        if (this.goalSelector.getRunningGoals().noneMatch(g -> g.getGoal() == this.followPlayerGoal)) {
+                        if (this.goalSelector.getGoals().stream().noneMatch(goal -> goal.getGoal() == this.followPlayerGoal && goal.isRunning())) {
                             this.goalSelector.add(2, this.followPlayerGoal);
                         }
                     }
@@ -73,7 +73,7 @@ public class StalkEntity extends HostileEntity {
                         this.playAlertSound();
                         this.isAlerted = true;
                         this.followPlayerTicks = 200;
-                        if (this.goalSelector.getRunningGoals().noneMatch(g -> g.getGoal() == this.followPlayerGoal)) {
+                        if (this.goalSelector.getGoals().stream().noneMatch(goal -> goal.getGoal() == this.followPlayerGoal && goal.isRunning())) {
                             this.goalSelector.add(2, this.followPlayerGoal);
                         }
                     }

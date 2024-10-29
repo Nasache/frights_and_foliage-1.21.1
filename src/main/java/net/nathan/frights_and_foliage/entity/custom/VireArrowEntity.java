@@ -18,7 +18,9 @@ public class VireArrowEntity extends PersistentProjectileEntity {
     }
 
     public VireArrowEntity(World world, LivingEntity owner) {
-        super(ModEntities.VIRE_FEATHER_ARROW, owner, world);
+        super(ModEntities.VIRE_FEATHER_ARROW, world);
+        this.setOwner(owner);
+
         if (owner instanceof PlayerEntity player) {
             this.pickupType = player.getAbilities().creativeMode ? PickupPermission.CREATIVE_ONLY : PickupPermission.ALLOWED;
         } else {
@@ -27,9 +29,11 @@ public class VireArrowEntity extends PersistentProjectileEntity {
     }
 
     public VireArrowEntity(World world, double x, double y, double z) {
-        super(ModEntities.VIRE_FEATHER_ARROW, x, y, z, world);
+        super(ModEntities.VIRE_FEATHER_ARROW, world);
+        this.setPos(x, y, z);
         this.pickupType = PickupPermission.ALLOWED;
     }
+
 
     @Override
     public void tick() {

@@ -2,6 +2,7 @@ package net.nathan.frights_and_foliage.world.tree.custom;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
@@ -18,9 +19,8 @@ import java.util.List;
 import java.util.function.BiConsumer;
 
 public class AseriaTrunkPlacer extends TrunkPlacer {
-    public static final Codec<AseriaTrunkPlacer> CODEC = RecordCodecBuilder.create((AcerTrunkPlacerInstance) -> {
-        return fillTrunkPlacerFields(AcerTrunkPlacerInstance).apply(AcerTrunkPlacerInstance, AseriaTrunkPlacer::new);
-    });
+    public static final MapCodec<AseriaTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec((AcerTrunkPlacerInstance) ->
+            fillTrunkPlacerFields(AcerTrunkPlacerInstance).apply(AcerTrunkPlacerInstance, AseriaTrunkPlacer::new));
 
     public AseriaTrunkPlacer(int i, int j, int k) {
         super(i, j, k);

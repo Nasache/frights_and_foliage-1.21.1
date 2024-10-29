@@ -2,7 +2,6 @@ package net.nathan.frights_and_foliage.entity.custom;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.AnimationState;
-import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -61,10 +60,6 @@ public class LephidEntity extends HostileEntity {
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 4)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.35)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2);
-    }
-
-    public EntityGroup getGroup() {
-        return EntityGroup.ARTHROPOD;
     }
 
     @Override

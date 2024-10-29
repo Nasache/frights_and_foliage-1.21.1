@@ -7,8 +7,8 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.CampfireBlockEntity;
-import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
@@ -50,7 +50,7 @@ public class ModCampfireBlock extends CampfireBlock {
 
     public static void spawnSmokeParticle(World world, BlockPos pos, boolean isSignal, boolean lotsOfSmoke) {
         Random random = world.getRandom();
-        DefaultParticleType defaultParticleType = isSignal ? ParticleTypes.CAMPFIRE_SIGNAL_SMOKE : ParticleTypes.CAMPFIRE_COSY_SMOKE;
+        SimpleParticleType defaultParticleType = isSignal ? ParticleTypes.CAMPFIRE_SIGNAL_SMOKE : ParticleTypes.CAMPFIRE_COSY_SMOKE;
         world.addImportantParticle(
                 defaultParticleType,
                 true,
@@ -86,8 +86,9 @@ public class ModCampfireBlock extends CampfireBlock {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return world.isClient ? checkType(type, ModBlockEntities.MOD_CAMPFIRE_BLOCK_ENTITY, CampfireBlockEntity::clientTick)
-                : (state.get(CampfireBlock.LIT) ? checkType(type, ModBlockEntities.MOD_CAMPFIRE_BLOCK_ENTITY, CampfireBlockEntity::litServerTick)
-                : checkType(type, ModBlockEntities.MOD_CAMPFIRE_BLOCK_ENTITY, CampfireBlockEntity::unlitServerTick));
+        return validateTicker(type, ModBlockEntities.MOD_CAMPFIRE_BLOCK_ENTITY,
+                world.isClient ? CampfireBlockEntity::clientTick
+                        : (state.get(CampfireBlock.LIT) ? CampfireBlockEntity::litServerTick
+                        : CampfireBlockEntity::unlitServerTick));
     }
 }

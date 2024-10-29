@@ -1,7 +1,5 @@
 package net.nathan.frights_and_foliage.blocks;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffects;
@@ -16,10 +14,7 @@ import net.nathan.frights_and_foliage.blocks.custom.*;
 import net.nathan.frights_and_foliage.item.ModItems;
 import net.nathan.frights_and_foliage.particle.ModParticles;
 import net.nathan.frights_and_foliage.util.ModWoodTypes;
-import net.nathan.frights_and_foliage.world.tree.MarnorSaplingGenerator;
-import net.nathan.frights_and_foliage.world.tree.OrangeAseriaSaplingGenerator;
-import net.nathan.frights_and_foliage.world.tree.RedAseriaSaplingGenerator;
-import net.nathan.frights_and_foliage.world.tree.YellowAseriaSaplingGenerator;
+import net.nathan.frights_and_foliage.world.tree.ModSaplingGenerators;
 
 import static net.minecraft.block.Blocks.*;
 
@@ -59,17 +54,17 @@ public class ModBlocks {
             new YellowAseriaLeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.YELLOW)));
 
     public static final Block RED_ASERIA_SAPLING = registerBlock("red_aseria_sapling",
-            new SaplingBlock(new RedAseriaSaplingGenerator(), AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).mapColor(MapColor.BRIGHT_RED)));
+            new SaplingBlock(ModSaplingGenerators.RED_ASERIA, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).mapColor(MapColor.BRIGHT_RED)));
     public static final Block POTTED_RED_ASERIA_SAPLING = registerBlockWithoutBlockItem("potted_red_aseria_sapling",
             new FlowerPotBlock(RED_ASERIA_SAPLING, AbstractBlock.Settings.copy(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.BRIGHT_RED)));
 
     public static final Block ORANGE_ASERIA_SAPLING = registerBlock("orange_aseria_sapling",
-            new SaplingBlock(new OrangeAseriaSaplingGenerator(), AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).mapColor(MapColor.ORANGE)));
+            new SaplingBlock(ModSaplingGenerators.ORANGE_ASERIA, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).mapColor(MapColor.ORANGE)));
     public static final Block POTTED_ORANGE_ASERIA_SAPLING = registerBlockWithoutBlockItem("potted_orange_aseria_sapling",
             new FlowerPotBlock(ORANGE_ASERIA_SAPLING, AbstractBlock.Settings.copy(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.ORANGE)));
 
     public static final Block YELLOW_ASERIA_SAPLING = registerBlock("yellow_aseria_sapling",
-            new SaplingBlock(new YellowAseriaSaplingGenerator(), AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).mapColor(MapColor.YELLOW)));
+            new SaplingBlock(ModSaplingGenerators.YELLOW_ASERIA, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).mapColor(MapColor.YELLOW)));
     public static final Block POTTED_YELLOW_ASERIA_SAPLING = registerBlockWithoutBlockItem("potted_yellow_aseria_sapling",
             new FlowerPotBlock(YELLOW_ASERIA_SAPLING, AbstractBlock.Settings.copy(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.YELLOW)));
 
@@ -128,7 +123,7 @@ public class ModBlocks {
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.PURPLE)));
 
     public static final Block MARNOR_SAPLING = registerBlock("marnor_sapling",
-            new MarnorSaplingBlock(new MarnorSaplingGenerator(), AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).mapColor(MapColor.PURPLE)));
+            new MarnorSaplingBlock(ModSaplingGenerators.MARNOR, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).mapColor(MapColor.PURPLE)));
     public static final Block POTTED_MARNOR_SAPLING = registerBlockWithoutBlockItem("potted_marnor_sapling",
             new FlowerPotBlock(MARNOR_SAPLING, AbstractBlock.Settings.copy(Blocks.POTTED_OAK_SAPLING).mapColor(MapColor.PURPLE)));
 

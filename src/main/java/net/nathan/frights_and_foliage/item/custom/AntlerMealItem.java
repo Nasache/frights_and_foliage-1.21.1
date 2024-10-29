@@ -35,7 +35,7 @@ public class AntlerMealItem extends Item {
     public static boolean useOnFertilizable(ItemStack stack, World world, BlockPos pos) {
         BlockState blockState = world.getBlockState(pos);
         if (blockState.getBlock() instanceof Fertilizable fertilizable) {
-            if (fertilizable.isFertilizable(world, pos, blockState, world.isClient)) {
+            if (fertilizable.isFertilizable(world, pos, blockState)) {
                 if (world instanceof ServerWorld) {
                     if (fertilizable.canGrow(world, world.random, pos, blockState)) {
                         BlockState grownState = fullyGrowPlant(world, pos, blockState);

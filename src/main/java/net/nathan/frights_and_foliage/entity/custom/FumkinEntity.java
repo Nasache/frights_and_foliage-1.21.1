@@ -60,9 +60,9 @@ public class FumkinEntity extends AnimalEntity {
     }
 
     @Override
-    protected void initDataTracker() {
-        super.initDataTracker();
-        this.dataTracker.startTracking(ANTLER_STAGE, 2);
+    protected void initDataTracker(DataTracker.Builder builder) {
+        super.initDataTracker(builder);
+        builder.add(ANTLER_STAGE, 2);
     }
 
     @Override
@@ -129,7 +129,7 @@ public class FumkinEntity extends AnimalEntity {
             if (this.getAntlerStage() == 2 && !this.getWorld().isClient) {
                 this.dropAntlers(SoundCategory.PLAYERS);
                 this.emitGameEvent(GameEvent.SHEAR, player);
-                itemStack.damage(1, player, (p) -> p.sendToolBreakStatus(hand));
+                itemStack.damage(1, player, getSlotForHand(hand));
                 return ActionResult.SUCCESS;
             }
         }
@@ -171,9 +171,8 @@ public class FumkinEntity extends AnimalEntity {
     }
 
     @Override
-    public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason,
-                                 @Nullable EntityData entityData, @Nullable NbtCompound entityNbt) {
-        EntityData data = super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
+    public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData) {
+        EntityData data = super.initialize(world, difficulty, spawnReason, entityData);
 
         if (this.isBaby()) {
             this.setAntlerStage(0);

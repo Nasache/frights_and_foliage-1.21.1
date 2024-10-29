@@ -14,4 +14,9 @@ public class ModCampfireBlockEntity extends CampfireBlockEntity {
     public BlockEntityType<?> getType() {
         return ModBlockEntities.MOD_CAMPFIRE_BLOCK_ENTITY;
     }
+
+    @Override
+    public boolean supports(BlockState state) {
+        return this.getType().supports(state);
+    }
 }

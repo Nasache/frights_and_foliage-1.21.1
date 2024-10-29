@@ -201,8 +201,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter);
 
         CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(new ItemConvertible[]{ModItems.GAIZE}), RecipeCategory.FOOD, ModItems.PEEPCORN, 0.35F, 200).criterion("has_gaize", conditionsFromItem(ModItems.GAIZE)).offerTo(exporter);
-        offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, 100, ModItems.GAIZE, ModItems.PEEPCORN, 0.35f);
-        offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.GAIZE, ModItems.PEEPCORN, 0.35f);
+        //offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, 100, ModItems.GAIZE, ModItems.PEEPCORN, 0.35f);
+        //offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.GAIZE, ModItems.PEEPCORN, 0.35f);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.GAIZE_BREAD)
                 .pattern("WGW")
@@ -244,6 +244,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(new ItemConvertible[]{ModItems.NOX_BERRIES}), RecipeCategory.FOOD, ModItems.DRIED_NOX_BERRIES, 0.35F, 200).criterion("has_nox_berries", conditionsFromItem(ModItems.NOX_BERRIES)).offerTo(exporter);
         offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, 100, ModItems.NOX_BERRIES, ModItems.DRIED_NOX_BERRIES, 0.35f);
         offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.NOX_BERRIES, ModItems.DRIED_NOX_BERRIES, 0.35f);
+
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SAFFROOT_OMELETTE)
                 .pattern("ESE")

@@ -1,6 +1,7 @@
 package net.nathan.frights_and_foliage.world.tree.custom;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.random.Random;
@@ -11,8 +12,11 @@ import net.minecraft.world.gen.foliage.FoliagePlacerType;
 import net.nathan.frights_and_foliage.world.tree.ModFoliagePlacerTypes;
 
 public class AseriaFoliagePlacer extends FoliagePlacer {
-    public static final Codec<AseriaFoliagePlacer> CODEC = RecordCodecBuilder.create((instance) -> fillFoliagePlacerFields(instance)
-            .and(Codec.intRange(0, 12).fieldOf("height").forGetter((placer) -> placer.height)).apply(instance, AseriaFoliagePlacer::new));
+    public static final MapCodec<AseriaFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec((instance) ->
+            fillFoliagePlacerFields(instance)
+                    .and(Codec.intRange(0, 12).fieldOf("height").forGetter((placer) -> placer.height))
+                    .apply(instance, AseriaFoliagePlacer::new));
+
     private final int height;
 
     public AseriaFoliagePlacer(IntProvider radius, IntProvider offset, int height) {

@@ -34,17 +34,14 @@ public class StalkEyeItem extends Item {
         return stack.isEmpty() ? ItemStack.EMPTY : stack;
     }
 
-    @Override
-    public int getMaxUseTime(ItemStack stack) {
+    public int getMaxUseTime(ItemStack stack, LivingEntity user) {
         return MAX_USE_TIME;
     }
 
-    @Override
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.EAT;
     }
 
-    @Override
     public SoundEvent getEatSound() {
         return SoundEvents.ENTITY_PHANTOM_BITE;
     }
