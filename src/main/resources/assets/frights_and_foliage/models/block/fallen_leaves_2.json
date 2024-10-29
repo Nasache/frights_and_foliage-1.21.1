@@ -1,0 +1,7 @@
+{
+  "parent": "frights_and_foliage:block/groundleaves_2",
+  "textures": {
+    "flowerbed": "frights_and_foliage:block/fallen_leaves",
+    "stem": "frights_and_foliage:block/fallen_leaves_stem"
+  }
+}

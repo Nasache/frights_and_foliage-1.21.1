@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "frights_and_foliage:block/aseria_log_top",
+    "side": "frights_and_foliage:block/aseria_syrup_log_stage0"
+  }
+}

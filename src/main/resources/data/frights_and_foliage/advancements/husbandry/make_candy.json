@@ -1,0 +1,38 @@
+{
+  "parent": "frights_and_foliage:husbandry/collect_syrup",
+  "criteria": {
+    "make_candy": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "frights_and_foliage:aseria_candy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.frights_and_foliage.make_candy.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "frights_and_foliage:aseria_candy"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.frights_and_foliage.make_candy.title"
+    }
+  },
+  "requirements": [
+    [
+      "make_candy"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

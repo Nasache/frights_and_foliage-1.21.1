@@ -1,0 +1,49 @@
+{
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "collect_syrup": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "tag": "frights_and_foliage:aseria_logs"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:glass_bottle"
+              ]
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.frights_and_foliage.collect_syrup.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "frights_and_foliage:aseria_syrup_bottle"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.frights_and_foliage.collect_syrup.title"
+    }
+  },
+  "requirements": [
+    [
+      "collect_syrup"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

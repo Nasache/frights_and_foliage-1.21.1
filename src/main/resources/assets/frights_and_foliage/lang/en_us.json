@@ -1,0 +1,182 @@
+{
+  "block.frights_and_foliage.aseria_planks": "Aseria Planks",
+  "block.frights_and_foliage.aseria_stairs": "Aseria Stairs",
+  "block.frights_and_foliage.aseria_slab": "Aseria Slab",
+  "block.frights_and_foliage.aseria_button": "Aseria Button",
+  "block.frights_and_foliage.aseria_pressure_plate": "Aseria Pressure Plate",
+  "block.frights_and_foliage.aseria_fence": "Aseria Fence",
+  "block.frights_and_foliage.aseria_fence_gate": "Aseria Fence Gate",
+  "block.frights_and_foliage.aseria_door": "Aseria Door",
+  "block.frights_and_foliage.aseria_trapdoor": "Aseria Trapdoor",
+  "block.frights_and_foliage.aseria_log": "Aseria Log",
+  "block.frights_and_foliage.aseria_syrup_log": "Aseria Syrup Log",
+  "block.frights_and_foliage.aseria_wood": "Aseria Wood",
+  "block.frights_and_foliage.stripped_aseria_log": "Stripped Aseria Log",
+  "block.frights_and_foliage.stripped_aseria_wood": "Stripped Aseria Wood",
+
+  "block.frights_and_foliage.aseria_sign": "Aseria Sign",
+  "block.frights_and_foliage.aseria_hanging_sign": "Aseria Hanging Sign",
+
+  "item.frights_and_foliage.aseria_boat": "Aseria Boat",
+  "item.frights_and_foliage.aseria_chest_boat": "Aseria Chest Boat",
+
+  "block.frights_and_foliage.red_aseria_sapling": "Red Aseria Sapling",
+  "block.frights_and_foliage.orange_aseria_sapling": "Orange Aseria Sapling",
+  "block.frights_and_foliage.yellow_aseria_sapling": "Yellow Aseria Sapling",
+
+  "block.frights_and_foliage.red_aseria_leaves": "Red Aseria Leaves",
+  "block.frights_and_foliage.orange_aseria_leaves": "Orange Aseria Leaves",
+  "block.frights_and_foliage.yellow_aseria_leaves": "Yellow Aseria Leaves",
+
+  "item.frights_and_foliage.aseria_syrup_bottle": "Aseria Syrup Bottle",
+
+  "block.frights_and_foliage.fallen_leaves": "Fallen Leaves",
+
+
+  "block.frights_and_foliage.marnor_planks": "Marnor Planks",
+  "block.frights_and_foliage.marnor_stairs": "Marnor Stairs",
+  "block.frights_and_foliage.marnor_slab": "Marnor Slab",
+  "block.frights_and_foliage.marnor_button": "Marnor Button",
+  "block.frights_and_foliage.marnor_pressure_plate": "Marnor Pressure Plate",
+  "block.frights_and_foliage.marnor_fence": "Marnor Fence",
+  "block.frights_and_foliage.marnor_fence_gate": "Marnor Fence Gate",
+  "block.frights_and_foliage.marnor_door": "Marnor Door",
+  "block.frights_and_foliage.marnor_trapdoor": "Marnor Trapdoor",
+  "block.frights_and_foliage.marnor_log": "Marnor Log",
+  "block.frights_and_foliage.marnor_wood": "Marnor Wood",
+  "block.frights_and_foliage.stripped_marnor_log": "Stripped Marnor Log",
+  "block.frights_and_foliage.stripped_marnor_wood": "Stripped Marnor Wood",
+
+  "block.frights_and_foliage.marnor_sign": "Marnor Sign",
+  "block.frights_and_foliage.marnor_hanging_sign": "Marnor Hanging Sign",
+
+  "item.frights_and_foliage.marnor_boat": "Marnor Boat",
+  "item.frights_and_foliage.marnor_chest_boat": "Marnor Chest Boat",
+
+  "block.frights_and_foliage.marnor_sapling": "Marnor Sapling",
+
+  "block.frights_and_foliage.marnor_leaves": "Marnor Leaves",
+  "block.frights_and_foliage.infested_marnor_leaves": "Infested Marnor Leaves",
+
+  "block.frights_and_foliage.marnor_vines": "Violet Vines",
+  "block.frights_and_foliage.marnor_vines_plant": "Violet Vines",
+
+  "block.frights_and_foliage.thorny_cobblestone": "Thorny Cobblestone",
+  "block.frights_and_foliage.thorny_cobblestone_stairs": "Thorny Cobblestone Stairs",
+  "block.frights_and_foliage.thorny_cobblestone_slab": "Thorny Cobblestone Slab",
+  "block.frights_and_foliage.thorny_cobblestone_wall": "Thorny Cobblestone Wall",
+
+
+  "item.frights_and_foliage.warped_pumpkin_seeds": "Warped Pumpkin Seeds",
+  "block.frights_and_foliage.warped_pumpkin": "Warped Pumpkin",
+  "block.frights_and_foliage.carved_warped_pumpkin": "Carved Warped Pumpkin",
+  "block.frights_and_foliage.warped_jack_o_lantern": "Warped Jack o'Lantern",
+  "item.frights_and_foliage.warped_pumpkin_pie": "Warped Pumpkin Pie",
+
+
+  "item.frights_and_foliage.crimson_pumpkin_seeds": "Crimson Pumpkin Seeds",
+  "block.frights_and_foliage.crimson_pumpkin": "Crimson Pumpkin",
+  "block.frights_and_foliage.carved_crimson_pumpkin": "Carved Crimson Pumpkin",
+  "block.frights_and_foliage.crimson_jack_o_lantern": "Crimson Jack o'Lantern",
+  "item.frights_and_foliage.crimson_pumpkin_pie": "Crimson Pumpkin Pie",
+
+
+  "item.frights_and_foliage.raw_venison": "Raw Venison",
+  "item.frights_and_foliage.cooked_venison": "Cooked Venison",
+  "item.frights_and_foliage.fumkin_antler": "Fumkin Antler",
+  "item.frights_and_foliage.antlermeal": "Antlermeal",
+
+  "item.frights_and_foliage.stuffed_pumpkin": "Stuffed Pumpkin",
+  "item.frights_and_foliage.saffroot": "Saffroot",
+  "block.frights_and_foliage.saffroot_crop": "Saffroot Crop",
+
+  "block.frights_and_foliage.darkrose_bush": "Darkrose Bush",
+  "block.frights_and_foliage.ambercup_bush": "Ambercup Bush",
+  "block.frights_and_foliage.rotbud": "Rotbud",
+  "block.frights_and_foliage.twinfire_bloom": "Twinfire Bloom",
+
+  "block.frights_and_foliage.wild_gaize_crop": "Wild Gaize",
+  "item.frights_and_foliage.gaize": "Gaize",
+  "item.frights_and_foliage.gaize_seeds": "Gaize Seeds",
+  "item.frights_and_foliage.gaize_bread": "Gaize Bread",
+  "item.frights_and_foliage.gaize_fritter": "Gaize Fritter",
+  "item.frights_and_foliage.peepcorn": "Peepcorn",
+
+
+  "item.frights_and_foliage.aseria_candy": "Aseria Candy",
+  "item.frights_and_foliage.aseria_waffle": "Aseria Waffle",
+  "item.frights_and_foliage.aseria_sugar_cookie": "Aseria Sugar Cookie",
+
+  "item.frights_and_foliage.nox_berries": "Nox Berries",
+  "block.frights_and_foliage.nox_berry_bush": "Nox Berry Bush",
+
+  "item.frights_and_foliage.nox_berry_trail_mix": "Nox Berry Trail Mix",
+  "item.frights_and_foliage.dried_nox_berries": "Dried Nox Berries",
+  "item.frights_and_foliage.berry_blend": "Berry Blend",
+
+  "item.frights_and_foliage.starch_skewer": "Starch Skewer",
+  "item.frights_and_foliage.saffroot_omelette": "Saffroot Omelette",
+
+  "item.frights_and_foliage.apple_cider": "Apple Cider",
+
+  "item.frights_and_foliage.spooky_torch": "Eerie Torch",
+  "block.frights_and_foliage.spooky_torch": "Eerie Torch",
+  "block.frights_and_foliage.wall_spooky_torch": "Wall Eerie Torch",
+  "block.frights_and_foliage.spooky_lantern": "Eerie Lantern",
+  "block.frights_and_foliage.spooky_campfire": "Eerie Campfire",
+
+  "item.frights_and_foliage.stalk_eye": "Stalk Eye",
+
+  "item.frights_and_foliage.vire_feather": "Vire Feather",
+  "item.frights_and_foliage.vire_feather_arrow": "Vire Feather Arrow",
+
+  "entity.frights_and_foliage.vire_arrow": "Vire Feather Arrow",
+
+
+  "item.frights_and_foliage.stalk_spawn_egg": "Stalk Spawn Egg",
+  "entity.frights_and_foliage.stalk": "Stalk",
+
+  "item.frights_and_foliage.fumkin_spawn_egg": "Fumkin Spawn Egg",
+  "entity.frights_and_foliage.fumkin": "Fumkin",
+
+  "item.frights_and_foliage.lephid_spawn_egg": "Lephid Spawn Egg",
+  "entity.frights_and_foliage.lephid": "Lephid",
+
+  "item.frights_and_foliage.vire_spawn_egg": "Vire Spawn Egg",
+  "entity.frights_and_foliage.vire": "Vire",
+
+
+  "advancements.frights_and_foliage.collect_syrup.title": "No Added Sugar!",
+  "advancements.frights_and_foliage.collect_syrup.description": "Harvest some Aseria Syrup from a tree",
+
+  "advancements.frights_and_foliage.make_candy.title": "Some Added Sugar",
+  "advancements.frights_and_foliage.make_candy.description": "Use Aseria Syrup to make some candy! Like taking candy from a... tree?",
+
+  "advancements.frights_and_foliage.eerie_lantern.title": "A Lantern for the Lost",
+  "advancements.frights_and_foliage.eerie_lantern.description": "Obtain an Eerie Lantern. Keep the flame alive, it may just be someone’s soul",
+
+  "advancements.frights_and_foliage.fumkin_antler.title": "Pumpkin Pruner",
+  "advancements.frights_and_foliage.fumkin_antler.description": "Obtain a Fumkin's Antlers. Don't worry, they grow back",
+
+  "advancements.frights_and_foliage.kill_stalk.title": "Somebody's Watching Me",
+  "advancements.frights_and_foliage.kill_stalk.description": "Defeat a Stalk, a juvenile guardian of the Violet Bramble",
+
+
+  "sounds.frights_and_foliage.stalk_hurt": "Stalk Hurt",
+  "sounds.frights_and_foliage.stalk_alert": "Stalk Alert Scream",
+  "sounds.frights_and_foliage.stalk_angry": "Stalk Angry Scream",
+
+  "sounds.frights_and_foliage.fumkin_hurt": "Fumkin Hurt",
+
+  "sounds.frights_and_foliage.vire_caw": "Vire Hurt",
+  "sounds.frights_and_foliage.vire_ambient": "Vire Caws",
+
+  "biome.frights_and_foliage.autumnal_forest": "Autumnal Forest",
+  "biome.frights_and_foliage.violet_bramble": "Violet Bramble",
+
+  "structure.frights_and_foliage.autumn_cottage": "Autumn Cottage",
+  "structure.frights_and_foliage.hedge_maze": "Hedge Maze",
+
+
+  "itemgroup.frights_and_foliage": "Frights And Foliage"
+}

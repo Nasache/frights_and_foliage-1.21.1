@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:adventure/kill_a_mob",
+  "criteria": {
+    "frights_and_foliage:stalk": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "frights_and_foliage:stalk"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.frights_and_foliage.kill_stalk.description"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "frights_and_foliage:stalk_eye"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.frights_and_foliage.kill_stalk.title"
+    }
+  },
+  "requirements": [
+    [
+      "frights_and_foliage:stalk"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

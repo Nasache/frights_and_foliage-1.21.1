@@ -1,0 +1,38 @@
+{
+  "stalk_alert": {
+    "subtitle": "sounds.frights_and_foliage.stalk_alert",
+    "sounds": [
+      "frights_and_foliage:stalk_alert"
+    ]
+  },
+  "stalk_angry": {
+    "subtitle": "sounds.frights_and_foliage.stalk_angry",
+    "sounds": [
+      "frights_and_foliage:stalk_angry"
+    ]
+  },
+  "stalk_hurt": {
+    "subtitle": "sounds.frights_and_foliage.stalk_hurt",
+    "sounds": [
+      "frights_and_foliage:stalk_hurt"
+    ]
+  },
+  "fumkin_hurt": {
+    "subtitle": "sounds.frights_and_foliage.fumkin_hurt",
+    "sounds": [
+      "frights_and_foliage:fumkin_hurt"
+    ]
+  },
+  "vire_caw": {
+    "subtitle": "sounds.frights_and_foliage.vire_caw",
+    "sounds": [
+      "frights_and_foliage:vire_caw"
+    ]
+  },
+  "vire_ambient": {
+    "subtitle": "sounds.frights_and_foliage.vire_ambient",
+    "sounds": [
+      "frights_and_foliage:vire_ambient"
+    ]
+  }
+}

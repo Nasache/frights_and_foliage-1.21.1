@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "frights_and_foliage:hedge_maze",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 9272271091,
+
+    "spacing": 10,
+
+    "separation": 5,
+
+    "type": "minecraft:random_spread"
+  }
+}

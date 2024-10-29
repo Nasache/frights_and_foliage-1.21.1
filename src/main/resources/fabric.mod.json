@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "frights_and_foliage",
+	"version": "${version}",
+	"name": "Frights & Foliage",
+	"description": "Frights & Foliage adds both the coziness and the spookiness of autumn.",
+	"authors": [
+		"Nathan"
+	],
+	"contact": {
+		"homepage": "https://github.com/Nasache/frights_and_foliage-1.21.1",
+		"sources": "https://github.com/Nasache/frights_and_foliage-1.21.1"
+	},
+	"license": "MIT",
+	"icon": "assets/frights_and_foliage/frights_and_foliage_icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.nathan.frights_and_foliage.FrightsAndFoliage"
+		],
+		"fabric-datagen": [
+			"net.nathan.frights_and_foliage.FrightsAndFoliageDataGenerator"
+		],
+		"client": [
+			"net.nathan.frights_and_foliage.FrightsAndFoliageClient"
+		],
+		"terrablender": [
+			"net.nathan.frights_and_foliage.world.biome.ModTerraBlenderAPI"
+		]
+	},
+	"mixins": [
+		"frights_and_foliage.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

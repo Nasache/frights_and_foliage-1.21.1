@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "frights_and_foliage:block/marnor_vines_plant"
+  }
+}

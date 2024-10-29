@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "frights_and_foliage:autumn_cottage",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 9272291830,
+
+    "spacing": 32,
+
+    "separation": 16,
+
+    "type": "minecraft:random_spread"
+  }
+}

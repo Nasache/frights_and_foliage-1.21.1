@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "frights_and_foliage:block/infested_marnor_leaves",
+    "east": "frights_and_foliage:block/marnor_leaves",
+    "north": "frights_and_foliage:block/marnor_leaves",
+    "particle": "frights_and_foliage:block/marnor_leaves",
+    "south": "frights_and_foliage:block/marnor_leaves",
+    "up": "frights_and_foliage:block/marnor_leaves",
+    "west": "frights_and_foliage:block/marnor_leaves"
+  }
+}

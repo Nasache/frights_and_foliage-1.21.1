@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"package": "net.nathan.frights_and_foliage.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"FoliagePlacerTypeInvoker",
+		"TrunkPlacerTypeInvoker",
+		"EndermanEntityMixin",
+		"SpiderEntityMixin",
+		"InGameHudMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
