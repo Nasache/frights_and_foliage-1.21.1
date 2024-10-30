@@ -22,7 +22,8 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "frights_and_foliage:fumkin_antler"
+      "count": 1,
+      "id": "frights_and_foliage:fumkin_antler"
     },
     "show_toast": true,
     "title": {

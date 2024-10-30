@@ -10,7 +10,6 @@ import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
@@ -200,9 +199,10 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.ASERIA_SYRUP_BOTTLE), conditionsFromItem(ModItems.ASERIA_SYRUP_BOTTLE))
                 .offerTo(exporter);
 
-        CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(new ItemConvertible[]{ModItems.GAIZE}), RecipeCategory.FOOD, ModItems.PEEPCORN, 0.35F, 200).criterion("has_gaize", conditionsFromItem(ModItems.GAIZE)).offerTo(exporter);
-        //offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, 100, ModItems.GAIZE, ModItems.PEEPCORN, 0.35f);
-        //offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.GAIZE, ModItems.PEEPCORN, 0.35f);
+        CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(new ItemConvertible[]{ModItems.GAIZE}), RecipeCategory.FOOD, ModItems.PEEPCORN, 0.35F, 200).criterion("has_gaize", conditionsFromItem(ModItems.GAIZE)).offerTo(exporter, "peepcorn_smelting");
+        CookingRecipeJsonBuilder.createSmoking(Ingredient.ofItems(new ItemConvertible[]{ModItems.GAIZE}), RecipeCategory.FOOD, ModItems.PEEPCORN, 0.35f, 100).criterion("has_gaize", conditionsFromItem(ModItems.GAIZE)).offerTo(exporter, "peepcorn_smoker");
+        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.ofItems(new ItemConvertible[]{ModItems.GAIZE}), RecipeCategory.FOOD, ModItems.PEEPCORN, 0.35f, 600).criterion("has_gaize", conditionsFromItem(ModItems.GAIZE)).offerTo(exporter, "peepcorn_campfire");
+
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.GAIZE_BREAD)
                 .pattern("WGW")
@@ -241,9 +241,9 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(Items.SWEET_BERRIES), conditionsFromItem(Items.SWEET_BERRIES))
                 .offerTo(exporter);
 
-        CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(new ItemConvertible[]{ModItems.NOX_BERRIES}), RecipeCategory.FOOD, ModItems.DRIED_NOX_BERRIES, 0.35F, 200).criterion("has_nox_berries", conditionsFromItem(ModItems.NOX_BERRIES)).offerTo(exporter);
-        offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, 100, ModItems.NOX_BERRIES, ModItems.DRIED_NOX_BERRIES, 0.35f);
-        offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.NOX_BERRIES, ModItems.DRIED_NOX_BERRIES, 0.35f);
+        CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(new ItemConvertible[]{ModItems.NOX_BERRIES}), RecipeCategory.FOOD, ModItems.DRIED_NOX_BERRIES, 0.35F, 200).criterion("has_nox_berries", conditionsFromItem(ModItems.NOX_BERRIES)).offerTo(exporter, "dried_nox_berries_smelting");
+        CookingRecipeJsonBuilder.createSmoking(Ingredient.ofItems(new ItemConvertible[]{ModItems.NOX_BERRIES}), RecipeCategory.FOOD, ModItems.DRIED_NOX_BERRIES, 0.35f, 100).criterion("has_nox_berries", conditionsFromItem(ModItems.NOX_BERRIES)).offerTo(exporter, "dried_nox_berries_smoking");
+        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.ofItems(new ItemConvertible[]{ModItems.NOX_BERRIES}), RecipeCategory.FOOD, ModItems.DRIED_NOX_BERRIES, 0.35f, 600).criterion("has_nox_berries", conditionsFromItem(ModItems.NOX_BERRIES)).offerTo(exporter, "dried_nox_berries_campfire");
 
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SAFFROOT_OMELETTE)
@@ -330,8 +330,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.AMBERCUP_BUSH), conditionsFromItem(ModBlocks.AMBERCUP_BUSH))
                 .offerTo(exporter);
 
-        CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(new ItemConvertible[]{ModItems.RAW_VENISON}), RecipeCategory.FOOD, ModItems.COOKED_VENISON, 0.35F, 200).criterion("has_raw_venison", conditionsFromItem(ModItems.RAW_VENISON)).offerTo(exporter);
-        offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, 100, ModItems.RAW_VENISON, ModItems.COOKED_VENISON, 0.35f);
-        offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.RAW_VENISON, ModItems.COOKED_VENISON, 0.35f);
+        CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(new ItemConvertible[]{ModItems.RAW_VENISON}), RecipeCategory.FOOD, ModItems.COOKED_VENISON, 0.35F, 200).criterion("has_raw_venison", conditionsFromItem(ModItems.RAW_VENISON)).offerTo(exporter, "cooked_venison_smelting");
+        CookingRecipeJsonBuilder.createSmoking(Ingredient.ofItems(new ItemConvertible[]{ModItems.RAW_VENISON}), RecipeCategory.FOOD, ModItems.COOKED_VENISON, 0.35f, 100).criterion("has_raw_venison", conditionsFromItem(ModItems.RAW_VENISON)).offerTo(exporter, "cooked_venison_smoking");
+        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.ofItems(new ItemConvertible[]{ModItems.RAW_VENISON}), RecipeCategory.FOOD, ModItems.COOKED_VENISON, 0.35f, 600).criterion("has_raw_venison", conditionsFromItem(ModItems.RAW_VENISON)).offerTo(exporter, "cooked_venison_campfire");
     }
 }

@@ -24,7 +24,8 @@
     "frame": "goal",
     "hidden": false,
     "icon": {
-      "item": "frights_and_foliage:stalk_eye"
+      "count": 1,
+      "id": "frights_and_foliage:stalk_eye"
     },
     "show_toast": true,
     "title": {

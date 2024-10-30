@@ -8,30 +8,21 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.nathan.frights_and_foliage.entity.ModEntities;
 import net.nathan.frights_and_foliage.item.ModItems;
+import org.jetbrains.annotations.Nullable;
 
 public class VireArrowEntity extends PersistentProjectileEntity {
     private boolean velocityIncreased = false;
 
     public VireArrowEntity(EntityType<? extends VireArrowEntity> entityType, World world) {
         super(entityType, world);
-        this.pickupType = PickupPermission.ALLOWED;
     }
 
-    public VireArrowEntity(World world, LivingEntity owner) {
-        super(ModEntities.VIRE_FEATHER_ARROW, world);
-        this.setOwner(owner);
-
-        if (owner instanceof PlayerEntity player) {
-            this.pickupType = player.getAbilities().creativeMode ? PickupPermission.CREATIVE_ONLY : PickupPermission.ALLOWED;
-        } else {
-            this.pickupType = PickupPermission.DISALLOWED;
-        }
+    public VireArrowEntity(World world, LivingEntity owner, ItemStack stack, @Nullable ItemStack shotFrom) {
+        super(ModEntities.VIRE_FEATHER_ARROW, owner, world, stack, shotFrom);
     }
 
-    public VireArrowEntity(World world, double x, double y, double z) {
-        super(ModEntities.VIRE_FEATHER_ARROW, world);
-        this.setPos(x, y, z);
-        this.pickupType = PickupPermission.ALLOWED;
+    public VireArrowEntity(World world, double x, double y, double z, ItemStack stack, @Nullable ItemStack shotFrom) {
+        super(ModEntities.VIRE_FEATHER_ARROW, x, y, z, world, stack, shotFrom);
     }
 
 

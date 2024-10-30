@@ -22,7 +22,8 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "frights_and_foliage:aseria_candy"
+      "count": 1,
+      "id": "frights_and_foliage:aseria_candy"
     },
     "show_toast": true,
     "title": {
