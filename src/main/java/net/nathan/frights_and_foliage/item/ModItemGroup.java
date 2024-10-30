@@ -15,7 +15,7 @@ public class ModItemGroup {
     public static final ItemGroup FRIGHTSANDFOLIAGE = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(FrightsAndFoliage.MOD_ID, "frights_and_foliage"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.frights_and_foliage"))
-                    .icon(() -> new ItemStack(ModItems.STALK_EYE)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModItems.FUMKIN_ANTLER)).entries((displayContext, entries) -> {
 
                         entries.add(ModBlocks.ASERIA_LOG);
                         entries.add(ModBlocks.ASERIA_SYRUP_LOG);

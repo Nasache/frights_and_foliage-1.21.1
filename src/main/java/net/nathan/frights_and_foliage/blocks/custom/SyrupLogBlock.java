@@ -14,6 +14,7 @@ import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -52,18 +53,15 @@ public class SyrupLogBlock extends PillarBlock {
         }
     }
 
-    @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        ItemStack itemStack = player.getStackInHand(Hand.MAIN_HAND);
+    public ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         int age = state.get(AGE);
-
-        if (age == MAX_AGE && itemStack.isOf(Items.GLASS_BOTTLE)) {
-            itemStack.decrement(1);
+        if (age == MAX_AGE && stack.isOf(Items.GLASS_BOTTLE)) {
+            stack.decrement(1);
             world.playSound(null, pos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
             ItemStack syrupBottle = new ItemStack(ModItems.ASERIA_SYRUP_BOTTLE);
-            if (itemStack.isEmpty()) {
-                player.setStackInHand(Hand.MAIN_HAND, syrupBottle);
+            if (stack.isEmpty()) {
+                player.setStackInHand(hand, syrupBottle);
             } else if (!player.getInventory().insertStack(syrupBottle)) {
                 player.dropItem(syrupBottle, false);
             }
@@ -71,10 +69,9 @@ public class SyrupLogBlock extends PillarBlock {
             world.setBlockState(pos, state.with(AGE, 0), 2);
             world.emitGameEvent(GameEvent.FLUID_PICKUP, pos, Emitter.of(player, state.with(AGE, 0)));
 
-            return ActionResult.success(world.isClient);
+            return ItemActionResult.success(world.isClient);
         }
-
-        return ActionResult.PASS;
+        return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
     }
 
     static {

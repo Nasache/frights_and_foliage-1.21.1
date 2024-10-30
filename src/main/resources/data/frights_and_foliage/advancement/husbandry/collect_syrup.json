@@ -8,7 +8,7 @@
             "condition": "minecraft:location_check",
             "predicate": {
               "block": {
-                "blocks": "#frights_and_foliage:aseria_logs"
+                "blocks": "frights_and_foliage:aseria_syrup_log"
               }
             }
           },
