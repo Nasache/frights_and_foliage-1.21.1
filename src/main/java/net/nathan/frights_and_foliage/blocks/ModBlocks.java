@@ -5,6 +5,7 @@ import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -217,9 +218,13 @@ public class ModBlocks {
 
 
     public static final Block SPOOKY_TORCH = registerBlockWithoutBlockItem("spooky_torch",
-            new TorchBlock(ModParticles.SPOOKY_FIRE_FLAME, AbstractBlock.Settings.copy(TORCH)));
+            new TorchBlock(ModParticles.SPOOKY_FIRE_FLAME, AbstractBlock.Settings.create().noCollision().breakInstantly().luminance((state) -> {
+                return 10;
+            }).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block WALL_SPOOKY_TORCH = registerBlockWithoutBlockItem("wall_spooky_torch",
-            new WallTorchBlock(ModParticles.SPOOKY_FIRE_FLAME, AbstractBlock.Settings.copy(WALL_TORCH)));
+            new WallTorchBlock(ModParticles.SPOOKY_FIRE_FLAME, AbstractBlock.Settings.create().noCollision().breakInstantly().luminance((state) -> {
+                return 10;
+            }).sounds(BlockSoundGroup.WOOD).dropsLike(SPOOKY_TORCH).pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block SPOOKY_LANTERN = registerBlock("spooky_lantern",
             new LanternBlock(AbstractBlock.Settings.copy(LANTERN)));
